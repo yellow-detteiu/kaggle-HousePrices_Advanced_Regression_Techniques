@@ -1,0 +1,2 @@
+# kaggle-HousePrices_Advanced_Regression_Techniques
+初めて参加するコンペ(不動産価格予想)のkaggle日記です。
