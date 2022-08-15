@@ -123,7 +123,7 @@ kaggle-I-m_Something_of_a_Painter_Myself
 - コンペ開始。まずはデータ全体を眺めて特徴をつかむ 
 
 ### 気づき
-‐ trainとtestの件数(行)は1件しか変わらない。
+- trainとtestの件数(行)は1件しか変わらない。
 - trainとtestで欠損値の分布も大体同じ
 - full bath, 建てられた年や改修された年, ガレージの質などがoverall conditionと相関が高い。後に建てられたものほど価格が高そう。testもほぼ同じ傾向
 - SalePriceと相関が強いのは、OverallQual, GrLivArea, ガレージ系, YearBuiltなど。意外にfireplaces(暖炉)も強い
