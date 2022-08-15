@@ -89,7 +89,12 @@ SaleCondition: Condition of sale
 - 81カラム
 - ガレージについてや接道状況など、かなり細かく特徴量が用意されている。プールについてもあるのはありがたい。  
 - 追加のシートはないようだ  
-- testデータは2010年に売れた物件のみ  
+
+
+# 追加で作成した特徴量
+
+HouseAge: 売れた時点での築年数。train['YrSold'] - train['YearBuilt']。SalePriceと負の相関。
+RemodHouseAge: 改修時点からの築年数。train['YrSold'] - train['YearRemodAdd']。こちらもSalePriceと負の相関
 
 # 結果
 
@@ -118,16 +123,21 @@ kaggle-I-m_Something_of_a_Painter_Myself
 - コンペ開始。まずはデータ全体を眺めて特徴をつかむ 
 
 ### 気づき
-- testは2010年に売れたもののみ
+‐ trainとtestの件数(行)は1件しか変わらない。
+- trainとtestで欠損値の分布も大体同じ
 - full bath, 建てられた年や改修された年, ガレージの質などがoverall conditionと相関が高い。後に建てられたものほど価格が高そう。testもほぼ同じ傾向
 - SalePriceと相関が強いのは、OverallQual, GrLivArea, ガレージ系, YearBuiltなど。意外にfireplaces(暖炉)も強い
 - MasVnrArea, BsmtFinSF系, 2ndFlrSF, Bath系, PoolAreaがほとんど0のため、かなり右に歪んでいる
 - garage系は左に歪んでたりもする
 - SalePriceも左に歪んでいる
+- YearBuilt, YearRemodAddはSalePriceと明確に正の相関。築年数は負の相関。
+- PoolAreaはいう程SalePriceに影響していない。プールがなくても高い家はたくさんある、が、PoolQL: Exの家は確実に高い。
 - 
 
 
 ### 課題、つまったこと
-
+- trainとtestの違いをAdversarial Varidationなどで調べる必要がある
+- SaleTypeの各要素がよく分からない
+- そもそもこれはどの国のどの地域のデータなのか
 
 ### 学んだこと
