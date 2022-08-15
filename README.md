@@ -93,8 +93,8 @@ SaleCondition: Condition of sale
 
 # 追加で作成した特徴量
 
-HouseAge: 売れた時点での築年数。train['YrSold'] - train['YearBuilt']。SalePriceと負の相関。
-RemodHouseAge: 改修時点からの築年数。train['YrSold'] - train['YearRemodAdd']。こちらもSalePriceと負の相関
+HouseAge: 売れた時点での築年数。train['YrSold'] - train['YearBuilt']。SalePriceと負の相関。  
+RemodHouseAge: 改修時点からの築年数。train['YrSold'] - train['YearRemodAdd']。こちらもSalePriceと負の相関  
 
 # 結果
 
