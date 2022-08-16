@@ -132,8 +132,6 @@ kaggle-I-m_Something_of_a_Painter_Myself
 - SalePriceも左に歪んでいる
 - YearBuilt, YearRemodAddはSalePriceと明確に正の相関。築年数は負の相関。
 - PoolAreaはいう程SalePriceに影響していない。プールがなくても高い家はたくさんある、が、PoolQL: Exの家は確実に高い。
-- 
-
 
 ### 課題、つまったこと
 - trainとtestの違いをAdversarial Varidationなどで調べる必要がある
@@ -141,3 +139,14 @@ kaggle-I-m_Something_of_a_Painter_Myself
 - そもそもこれはどの国のどの地域のデータなのか
 
 ### 学んだこと
+
+
+## 2020/08/16
+
+### 概要
+
+
+### 気づき
+- Street: paveが舗装。GRVLは舗装されていない道路？？paveの方が高い物件が多い
+- Alley: 路地。こちらもpaveの方が高い
+- 
