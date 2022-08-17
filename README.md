@@ -18,9 +18,9 @@ Utilities: Type of utilities available
 LotConfig: Lot configuration  
 LandSlope: Slope of property  
 Neighborhood: Physical locations within Ames city limits  
-Condition1: Proximity to main road or railroad  
+Condition1: Proximity to main road or railroad  (Proximity: 近接性)
 Condition2: Proximity to main road or railroad (if a second is present)  
-BldgType: Type of dwelling  
+BldgType: Type of dwelling  (dwelling: 住宅)
 HouseStyle: Style of dwelling  
 OverallQual: Overall material and finish quality  
 OverallCond: Overall condition rating  
@@ -144,9 +144,15 @@ kaggle-I-m_Something_of_a_Painter_Myself
 ## 2020/08/16
 
 ### 概要
-
+データ確認の続き
 
 ### 気づき
 - Street: paveが舗装。GRVLは舗装されていない道路？？paveの方が高い物件が多い
 - Alley: 路地。こちらもpaveの方が高い
-- 
+
+## 2020/08/17
+
+### 概要
+データ確認の続き
+
+- RoofMatl(屋根の素材)は割と価格に差が出そう 
