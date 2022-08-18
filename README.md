@@ -12,11 +12,11 @@ LotFrontage: Linear feet of street connected to property
 LotArea: Lot size in square feet  
 Street: Type of road access  
 Alley: Type of alley access  
-LotShape: General shape of property  
-LandContour: Flatness of the property  
+LotShape: General shape of property  (土地の形状。通常、イレギュラーなど)
+LandContour: Flatness of the property  (資産の傾斜度合い？)
 Utilities: Type of utilities available  
-LotConfig: Lot configuration  
-LandSlope: Slope of property  
+LotConfig: Lot configuration  (土地の構成。周囲との道路の位置関係？cul-de-sac: 行きどまり)
+LandSlope: Slope of property  (資産の傾斜度合い？)
 Neighborhood: Physical locations within Ames city limits  
 Condition1: Proximity to main road or railroad  (Proximity: 近接性)
 Condition2: Proximity to main road or railroad (if a second is present)  
@@ -30,7 +30,7 @@ RoofStyle: Type of roof
 RoofMatl: Roof material  
 Exterior1st: Exterior covering on house  
 Exterior2nd: Exterior covering on house (if more than one material)  
-MasVnrType: Masonry veneer type  
+MasVnrType: Masonry veneer type  (石材ベニヤの種類)
 MasVnrArea: Masonry veneer area in square feet  
 ExterQual: Exterior material quality  
 ExterCond: Present condition of the material on the exterior  
@@ -89,6 +89,14 @@ SaleCondition: Condition of sale
 - 81カラム
 - ガレージについてや接道状況など、かなり細かく特徴量が用意されている。プールについてもあるのはありがたい。  
 - 追加のシートはないようだ  
+- 地域は、アメリカのイリノイ州っぽい  (中央やや東部。シカゴあたり)
+https://en.wikipedia.org/wiki/Bloomington_Heights,_Illinois
+
+
+# 参考  
+https://invest.re-ism.co.jp/column/colum208/ (不動産価格の算定方法)  
+https://ja.sekaiproperty.com/article/3701/united-states-real-estate-investment-area-population-price-trend (アメリカの不動産価格についての記事)  
+https://mitomi-estate.com/differences_us-japan_real-estate-appraisal/ (アメリカの価格の決定要因について)  
 
 
 # 追加で作成した特徴量
@@ -155,4 +163,20 @@ kaggle-I-m_Something_of_a_Painter_Myself
 ### 概要
 データ確認の続き
 
+### 気づき
 - RoofMatl(屋根の素材)は割と価格に差が出そう 
+
+## 2020/08/18
+
+### 概要
+データ確認の続き。lightGBMも準備し始めた
+
+### 気づき
+- 月ごとではあまり値段の特徴なさそう  
+- ベニヤ石材の面積は割と関係ありそう(なんで？？)  
+https://kenzai-digest.com/entrance-approach/ 
+https://harima-ie.com/tab.php?id=9950 (自然素材の家は価格が高くなる？？)  
+
+### 課題、つまったこと  
+- LandContourとLandSlopeはどう違うか。おそらく前者は周囲の道路と土地がどのくらいの傾斜でつながっているか、後者は家そのものの傾斜具合  
+- 
